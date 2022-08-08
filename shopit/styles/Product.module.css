@@ -1,0 +1,23 @@
+.product {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 1rem;
+}
+.image img {
+  object-fit: contain;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.pitem {
+  cursor: pointer;
+  box-shadow: 1px 5px 5px #808080;
+  margin: 0 1rem;
+}
+.pricetag {
+  font-size: 0.9rem;
+  padding: 8px;
+}
+.pname {
+  color: blue;
+  padding: 0 8px;
+}
