@@ -31,6 +31,7 @@
   font-weight: 500;
   border-radius: 7px;
   transition: ease-in 1s;
+  cursor: pointer;
 }
 .cartbtn:hover {
   background-color: #c09d00;

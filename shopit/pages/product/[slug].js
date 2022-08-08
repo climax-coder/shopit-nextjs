@@ -14,7 +14,7 @@ function Product({ data }) {
       </Head>
       <Layout>
         {data.products.data.map((prod) => (
-          <div className={styles.proditem}>
+          <div key={prod.attributes.pid} className={styles.proditem}>
             <div className={styles.image}>
               <img
                 src={`http://localhost:1337${prod.attributes.pimage.data[0].attributes.url}`}
