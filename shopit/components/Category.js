@@ -16,6 +16,7 @@ function Category() {
           <Categoryitems
             imageurl={`http://localhost:1337${cat.attributes.cimage.data.attributes.url}`}
             cname={cat.attributes.cname}
+            slug={cat.attributes.cslug}
           />
         </div>
       ))}

@@ -6,6 +6,7 @@ export const categoryquery = gql`
       data {
         attributes {
           cid
+          cslug
           cname
           cimage {
             data {
@@ -54,6 +55,18 @@ export const productslug = gql`
   }
 `;
 
+export const categoryslug = gql`
+  query {
+    categories {
+      data {
+        attributes {
+          cslug
+        }
+      }
+    }
+  }
+`;
+
 export function getProductbySlug(slug) {
   return gql`
     query {
@@ -71,6 +84,38 @@ export function getProductbySlug(slug) {
               data {
                 attributes {
                   url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+}
+
+export function getCategorybySlug(slug) {
+  return gql`
+    query {
+      categories(filters: { cslug: { eq: "${slug}" } }) {
+        data {
+          attributes {
+            cid
+            cslug
+            products {
+              data {
+                attributes {
+                  pid
+                  pname
+                  price
+                  pslug
+                  pimage {
+                    data {
+                      attributes {
+                        url
+                      }
+                    }
+                  }
                 }
               }
             }
