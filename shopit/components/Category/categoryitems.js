@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../styles/categorycomp.module.css';
+import styles from '../../styles/categorycomp.module.css';
 
 function Categoryitems({ imageurl, cname, slug }) {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { categoryquery } from '../Graphql/queries';
+import { categoryquery } from '../../Graphql/queries';
 import Categoryitems from './categoryitems';
-import styles from '../styles/categorycomp.module.css';
+import styles from '../../styles/categorycomp.module.css';
 
 function Category() {
   const { loading, error, data } = useQuery(categoryquery);

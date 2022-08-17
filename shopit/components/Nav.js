@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Nav.module.css';
-import {FaShoppingBasket, FaHeart, FaSearch, FaUserAlt} from 'react-icons/fa'
+import { FaShoppingBasket, FaHeart, FaSearch, FaUserAlt } from 'react-icons/fa';
+import Dropdown from './DropdownBtn/Dropdown';
 
 function Nav() {
   return (
@@ -10,12 +11,18 @@ function Nav() {
       </div>
       <div className={styles.search}>
         <input type="text" className={styles.searchinput} />
-        <button className={styles.searchbtn}><FaSearch/></button>
+        <button className={styles.searchbtn}>
+          <FaSearch />
+        </button>
       </div>
       <div className={styles.icons}>
-        <button><FaHeart/></button>
-        <button><FaShoppingBasket/></button>
-        <button><FaUserAlt/></button>
+        <Dropdown />
+        <button>
+          <FaHeart />
+        </button>
+        <button>
+          <FaShoppingBasket />
+        </button>
       </div>
     </div>
   );
